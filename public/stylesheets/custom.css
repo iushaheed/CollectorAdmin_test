@@ -1,0 +1,91 @@
+.mapbody{
+    width:98% ;
+    background-color: #000;
+    margin: 1%;
+    padding: 1%
+}
+.collection-text {
+    width:98%;
+    background:rgb(242, 245, 245);
+    margin: 1%;
+    padding: 1%
+}
+.collector-list-heading-div {
+    width:100%;
+    background:rgb(242, 245, 245);
+    padding: 1%;
+    float: left;
+}
+.collector-list-heading-subdiv1 {
+    width:50%;
+    background:rgb(242, 245, 245);
+    padding: 1%;
+    float: left;
+
+}
+.collector-list-heading-subdiv2 {
+    background:rgb(242, 245, 245);
+    padding: 1%;
+    float: right;
+}
+.collector_short_info_container{
+    width: 100%;
+   background-color: #0C1F3F; 
+   margin-top: 5px;
+   padding: 2%;
+   float: left;
+
+}
+.collector_short_info_div{
+   width: 50%;
+   float: left;
+}
+.collector_short_info_div img{
+    max-width: 10%;
+    max-height: 10%;
+}
+.collector_short_info_div h3{
+    color: #fff
+}
+
+.collector_collection_div{
+    width: 30%;
+   margin-top: 5px;
+   float: right;
+
+}
+.collector_collection_div h1{
+    color: #fff
+}
+#mapbody{
+    width: 100%;
+    padding:1%;
+}
+#map{
+    width: 100%;
+    margin-top: 1%;
+    height: 600px;
+}
+.header_button_div{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-bottom: 3%
+}
+.margin1{
+    width: 98%;
+    margin: 1%;
+}
+.margin-padding5{
+    margin-left:5%;
+}
+.status-area-change-btn{
+    width: 20%;
+    margin: 5%
+}
+.custom-form-control{
+    width: 20%;
+}
+.center-it{
+    text-align: center
+}

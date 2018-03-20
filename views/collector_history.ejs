@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="BOND TECH">
+    <title>Collector List</title>
+    <!-- IUS | Bootstrap core CSS-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IUS | Custom fonts for this template-->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- IUS | Custom styles for this template-->
+    <link href="/stylesheets/sb-admin.css" rel="stylesheet">
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <!-- IUS |  Navigation MENU ON THE LEFT-->
+    <% include templates/navigation.ejs %>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/index">COLLECTOR</a>
+                    </li>
+                    <li class="breadcrumb-item active">LIST</li>
+                    <li class="breadcrumb-item active">DETAILS</li>
+
+                </ol>
+                <!-- IUS | map body -->
+                <a class="btn btn-primary" href="/index" id="toggleNavPosition">MAP POINTERS</a>
+                <a class="btn btn-primary" href="/getCollectorList">COLLECTOR LIST</a>
+
+            </div>
+
+            <div id="mapbody">
+                <div class="collector-list-heading-div">
+                    <div class="collector-list-heading-subdiv1">
+                        <h1><%= title %> of Collector ID#<%= this_collector_id %> </h1>
+                    </div>
+
+                    <div class="collector-list-heading-subdiv2">
+                        <h1>Total <b><%= totalAmount %></b>  BDT</h1>
+                    </div>
+                </div>
+
+                <table class="table table-bordered margin1">
+                    <thead>
+                        <tr>
+                            <th>TRANSACTION ID</th>
+                            <th>DETAILS</th>
+                            <th>BILL AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <% for(var i=0;i<resultArray.length;i++){ %>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4>
+                                        TrxID<%= resultArray[i].id %>
+                                    </h4>
+                                </td>
+                                <td>
+
+                                    <h4>On
+                                        <b>
+                                            <%= resultArray[i].timestamp %>
+                                        </b> collected from
+                                        <b>
+                                            <%= resultArray[i].user_name %>
+                                        </b>[
+                                        <%= resultArray[i].user_id %>]</h4>
+                                    <p>
+                                        <%= resultArray[i].user_address %>
+                                    </p>
+                                </td>
+
+                                <td>
+                                    <h4>
+                                        <%= resultArray[i].amount %>
+                                    </h4>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                        <% } %>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- IUS |  Footer -->
+        <% include templates/footer.ejs %>
+            <!-- Logout Modal-->
+            <% include templates/logout_model.ejs %>
+
+                <!-- Bootstrap core JavaScript-->
+                <script src="/vendor/jquery/jquery.min.js"></script>
+                <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <!-- Core plugin JavaScript-->
+                <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+                <!-- Custom scripts for all pages-->
+                <script src="/javascripts/sb-admin.min.js"></script>
+                <!-- Custom scripts for this page-->
+                <!-- Toggle between fixed and static navbar-->
+
+
+                </script>
+                </div>
+</body>
+
+</html>

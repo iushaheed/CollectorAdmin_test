@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="BOND TECH">
+    <title>Collector List</title>
+    <!-- IUS | Bootstrap core CSS-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IUS | Custom fonts for this template-->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- IUS | Custom styles for this template-->
+    <link href="/stylesheets/sb-admin.css" rel="stylesheet">
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <!-- IUS |  Navigation MENU ON THE LEFT-->
+    <% include templates/navigation.ejs %>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/control_panel">CONTROL PANEL</a>
+                    </li>
+                    <!-- <li class="breadcrumb-item active">COLLECTOR LIST</li> -->
+                </ol>
+            </div>
+            <!-- IUS | map body -->
+            <div class="header_button_div">
+                    <a class="btn btn-primary float-right" href="/add_collector">ADD COLLECTOR</a>
+            </div><br>
+            <!-- <h4 style="margin:1%"><%= title%></h4> -->
+
+            <table class="table table-bordered margin1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>COLLECTOR NAME</th>
+                            <th>LAST COLLECTION</th>
+                            <th>STATUS</th>
+                            <th>...</th>
+                        </tr>
+                    </thead>
+                    <% for(var i=0;i<resultArray.length;i++){ %>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <%= resultArray[i].id %>
+                                </td>
+                                <td>
+                                    <%= resultArray[i].name %>
+                                </td>
+                                <td>
+                                    <%= resultArray[i].last_collection %>
+                                </td>
+                                <td>
+                                    <%= resultArray[i].status %>
+                                </td>
+                                <td>
+                                    <a class="btn btn-info" href="/singleCollector/<%= resultArray[i].id %>">ACTION</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <% } %>
+                </table>
+        </div>
+
+
+        <!-- IUS |  Footer -->
+        <% include templates/footer.ejs %>
+            <!-- Logout Modal-->
+            <% include templates/logout_model.ejs %>
+
+                <!-- Bootstrap core JavaScript-->
+                <script src="/vendor/jquery/jquery.min.js"></script>
+                <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <!-- Core plugin JavaScript-->
+                <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+                <!-- Custom scripts for all pages-->
+                <script src="/javascripts/sb-admin.min.js"></script>
+                <!-- Custom scripts for this page-->
+                <!-- Toggle between fixed and static navbar-->
+
+
+                </script>
+                </div>
+</body>
+
+</html>
